@@ -10,7 +10,7 @@ This is a Flutter package with helper classes to more convenient integration wit
 It's wrap around [Provider package](https://github.com/rrousselGit/provider). And provides 
 ```ModuleInjector``` and ```DependentWidget``` Widgets to manage your project dependencies.
 
-And you can ask <b>Why not just using a [Provider](https://github.com/rrousselGit/provider)</b>
+And you can ask <b>Why not just using a [Provider?](https://github.com/rrousselGit/provider)</b>
 The first, Provider is a great package with support for reactive interactions of different widgets.
 And I strongly recommend using it for that purpose. 
 But using it just for a Dependency Injection pattern is resulting in writing too much code,
