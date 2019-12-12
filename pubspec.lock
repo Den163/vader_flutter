@@ -187,10 +187,10 @@ packages:
   vader_di:
     dependency: "direct main"
     description:
-      path: "..\\vader"
-      relative: true
-    source: path
-    version: "0.0.3+2"
+      name: vader_di
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.2"
   vector_math:
     dependency: transitive
     description:
