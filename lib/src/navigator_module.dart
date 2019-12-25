@@ -9,20 +9,23 @@ typedef Route RouteBuilder(RouteSettings settings);
 /// 
 /// Note if you want working hero animations,
 /// you need to add a [HeroController] into routes parameter 
-/// ([HeroController] is a subclass of a [RouteObserver])
+/// ([HeroController] is a subclass of a [NavigatorObserver])
 class NavigatorModule extends StatefulWidget {
   final Map<String, RouteBuilder> routes;
   final RouteBuilder onUnknownRoute;
   final List<NavigatorObserver> observers;
   final String initialRoute;
+  final GlobalKey<NavigatorState> navigatorKey;
 
   NavigatorModule({
     Key key,
     @required this.routes,
     this.initialRoute,
-    this.observers,
-    this.onUnknownRoute
+    this.observers = const <NavigatorObserver>[],
+    this.onUnknownRoute,
+    this.navigatorKey,
   }) :
+    assert(observers != null),
     assert(
       routes.containsKey('/'),
       'A Routes Map for NavigatorModule '
@@ -31,6 +34,7 @@ class NavigatorModule extends StatefulWidget {
     super(key: key);
 
   @override
+
   _NavigatorModuleState createState() => _NavigatorModuleState();
 }
 
@@ -39,7 +43,7 @@ class _NavigatorModuleState extends State<NavigatorModule> {
 
   @override
   void initState() {
-    _navigatorKey = GlobalKey<NavigatorState>();
+    _navigatorKey = widget.navigatorKey ?? GlobalKey<NavigatorState>();
 
     super.initState();
   }
@@ -55,7 +59,7 @@ class _NavigatorModuleState extends State<NavigatorModule> {
         initialRoute: widget.initialRoute,
         onUnknownRoute: widget.onUnknownRoute,
         observers: widget.observers,
-      ),
+      )
     );
   }
 }
