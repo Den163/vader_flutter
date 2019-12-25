@@ -9,8 +9,11 @@ abstract class ModuleInjector extends StatefulWidget {
   void configure(DiModule module);
   Widget build(BuildContext context);
 
+
+  /// Note. Don't override this
+  // TODO When package will be updated to Flutter 1.1.12.xx
+  // add [@nonVirtual] modifier 
   @override
-  @nonVirtual
   _ModuleInjectorState createState() => _ModuleInjectorState();
 }
 
