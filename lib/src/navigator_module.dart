@@ -2,9 +2,14 @@ import 'package:flutter/widgets.dart';
 
 typedef Route RouteBuilder(RouteSettings settings);
 
-/// Nested navigator module.
+/// Nested navigator module with it's own context.
+/// You can use it as a child of [ModuleInjector] to 
+/// get low independent module with it's dependencies
+/// or just like a nested [Navigator].
+/// 
 /// Note if you want working hero animations,
-/// you need to add a HeroController into route observers list
+/// you need to add a [HeroController] into routes parameter 
+/// ([HeroController] is a subclass of a [RouteObserver])
 class NavigatorModule extends StatefulWidget {
   final Map<String, RouteBuilder> routes;
   final RouteBuilder onUnknownRoute;
