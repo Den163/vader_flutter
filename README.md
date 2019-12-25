@@ -10,13 +10,13 @@ This is a Flutter package with helper classes to more convenient integration wit
 It's wrap around [Provider package](https://github.com/rrousselGit/provider). And provides 
 ```ModuleInjector``` and ```DependentWidget``` Widgets to manage your project dependencies.
 
-And you can ask <b>Why not just using a [Provider](https://github.com/rrousselGit/provider)</b>
-The first, Provider is a great package with support for reactive interactions of different widgets.
+And you can ask <b>Why not just using a [Provider?](https://github.com/rrousselGit/provider)</b>
+The first, Provider is a great package for maintain reactive interactions between different widgets.
 And I strongly recommend using it for that purpose. 
 But using it just for a Dependency Injection pattern is resulting in writing too much code,
 because of Widget nature of Provider. So in my projects I need a fast and convenient way to
-define a lot of services, repositories, BloCs(Business Logic Components), etc static components
-to make it receive from any point of a Flutter app. 
+define a lot of services, repositories, BloCs(Business Logic Components), etc 'static components'
+to receive it from any point of a Flutter app. 
 Note, that [Vader](https://github.com/Den163/vader) not listening on all dependencies like 
 a [Provider](https://github.com/rrousselGit/provider). And it's use case just to define and pass
 static 'business logic' dependencies. It's only listening on ``DiModule`` 
