@@ -14,7 +14,7 @@ dependencies:
 
   meta: ^1.1.7
   provider: ^3.2.0
-  vader_di: ^0.1.2
+  vader_di: ^0.2.0
 
 dev_dependencies:
   flutter_test:
