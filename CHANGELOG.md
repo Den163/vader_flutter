@@ -1,3 +1,7 @@
+## [0.3.0] 2019/12/25
+
+Added ```InjectableWidget```. Updated [vader_di](https://pub.dev/packages/vader_di) to 0.2.1
+
 ## [0.2.2] 2019/12/25
 
 Added ```NavigatorModule```. Fixed some compile issues when working with Flutter

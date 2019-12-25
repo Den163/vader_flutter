@@ -17,7 +17,7 @@ But using it just for a Dependency Injection pattern is resulting in writing too
 because of Widget nature of Provider. So in my projects I need a fast and convenient way to
 define a lot of services, repositories, BloCs(Business Logic Components), etc 'static components'
 to receive it from any point of a Flutter app. 
-Note, that [Vader](https://github.com/Den163/vader) not listening on all dependencies like 
+Note, that [Vader](https://pub.dev/packages/vader_di) not listening on all dependencies like 
 a [Provider](https://github.com/rrousselGit/provider). And it's use case just to define and pass
 static 'business logic' dependencies. It's only listening on ``DiModule`` 
 and rebuilds `ModuleInjector`'s subtree only if the parent `DiModule` changes,
@@ -28,7 +28,7 @@ because it passes through app via a [Provider](https://github.com/rrousselGit/pr
 A ``ModuleInjector`` is just a Widget wrapper around a ```DiModule``` vader class. 
 It is an abstract, so you need to subclass it to override a ```configure(DiModule)``` 
 ```build(BuildContext)``` methods. The first one is just defines dependencies via ```DiModule``` 
-([see Vader](https://github.com/Den163/vader)) for the subtree building from 
+([see Vader](https://pub.dev/packages/vader_di)) for the subtree building from 
 ```build(BuildContext)``` method.
 
 A ```DependentWidget``` is just a receiver of your dependencies, 
@@ -40,6 +40,9 @@ boilerplate code with ```_``` and ```__``` arguments.
 A ```NavigatorModule``` widget adds convenient and flexible way to create a nested ```Navigator``` with it's own context. You can combine
 it with ```ModuleInjector``` and get independent module with it's own dependencies. Note that if you want to use a ```Hero``` you in the nested ```Navigator``` - you need to add a ```HeroController``` to 
 observers parameter in ```Navigator``` or ```NavigatorModule```.
+
+Tired of a boring builder and factory writings for Widgets? Look at ```InjectableWidget<T>```.
+It just resolves and builds as child configured earlier ```Widget``` of type ```T```
 
 ## Example
 
