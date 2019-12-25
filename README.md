@@ -37,6 +37,10 @@ a factory function that builds a child widget with this dependencies. It's very 
 Provider's ```Consumer``` widget but without any context or other widget parameters to avoid
 boilerplate code with ```_``` and ```__``` arguments.
 
+A ```NavigatorModule``` widget adds convenient and flexible way to create a nested ```Navigator``` with it's own context. You can combine
+it with ```ModuleInjector``` and get independent module with it's own dependencies. Note that if you want to use a ```Hero``` you in the nested ```Navigator``` - you need to add a ```HeroController``` to 
+observers parameter in ```Navigator``` or ```NavigatorModule```.
+
 ## Example
 
 ```dart
