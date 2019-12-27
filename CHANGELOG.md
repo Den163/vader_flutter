@@ -1,4 +1,4 @@
-## [0.3.0] 2019/12/25
+## [0.3.1] 2019/12/25
 
 Added ```InjectableWidget```. Updated [vader_di](https://pub.dev/packages/vader_di) to 0.2.1
 
