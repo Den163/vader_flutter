@@ -1,3 +1,8 @@
+## [0.5.0] 2020/01/09
+
+Updated to the flutter 1.12.13+hotfix5 and to the dart 2.7.0
+Fixed tests
+
 ## [0.4.0] 2019/12/30
 
 Fixed bug in ```ModuleInjector```. Changed ```ModuleInjector```'s API

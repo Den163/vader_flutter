@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:vader_di/vader.dart';
+import 'package:meta/meta.dart';
 
 abstract class ModuleInjector extends StatelessWidget {
   Widget get child;
@@ -9,6 +10,7 @@ abstract class ModuleInjector extends StatelessWidget {
   ModuleInjector({Key key}) : super(key: key);
 
   @override
+  @nonVirtual
   Widget build(BuildContext context) {
     return Provider<DiModule>(
       create: (_) {
