@@ -92,11 +92,6 @@ class ModuleValueInjector<T> extends ModuleInjector {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return child;
-  }
-
-  @override
   void configure(DiModule module) {
     module.bind<T>().toValue(valueToResolve);
   }
