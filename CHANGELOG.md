@@ -1,3 +1,7 @@
+## [0.6.0] 2020/01/14
+
+Updated to the vader_di 0.3.1
+
 ## [0.5.0] 2020/01/09
 
 Updated to the flutter 1.12.13+hotfix5 and to the dart 2.7.0
