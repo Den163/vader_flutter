@@ -5,18 +5,18 @@ import 'package:meta/meta.dart';
 
 abstract class ModuleInjector extends StatelessWidget {
   Widget get child;
-  void configure(DiModule module);
+  void configure(DiContainer module);
 
   ModuleInjector({Key key}) : super(key: key);
 
   @override
   @nonVirtual
   Widget build(BuildContext context) {
-    return Provider<DiModule>(
+    return Provider<DiContainer>(
       create: (_) {
         final parentContainer = _tryGetParentContainer(context);
         final diContainer = new DiContainer(parentContainer);
-        final module = new DiModule(diContainer);
+        final module = new DiContainer(diContainer);
         configure(module);
         return module;
       },
@@ -27,7 +27,7 @@ abstract class ModuleInjector extends StatelessWidget {
 
   DiContainer _tryGetParentContainer(BuildContext context) {
     try {
-      return Provider.of<DiModule>(context).container;
+      return Provider.of<DiContainer>(context);
     } catch (e) {
       return null;
     }

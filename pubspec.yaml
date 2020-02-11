@@ -1,8 +1,7 @@
 name: vader_flutter
 description: A Flutter implementation of the Vader package with widgets
   and Provider wrap around
-version: 0.6.0
-author: Den163 <abramov.denis163@gmail.com>
+version: 1.0.0
 homepage: https://github.com/Den163/vader_flutter
 
 environment:
@@ -13,8 +12,8 @@ dependencies:
     sdk: flutter
 
   meta: ^1.1.8
-  provider: ^4.0.1
-  vader_di: ^0.3.1
+  provider: ^4.0.3
+  vader_di: ^1.0.0
 
 dev_dependencies:
   flutter_test:

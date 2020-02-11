@@ -12,10 +12,10 @@ class DependentWidget<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final diModule = Provider.of<DiModule>(context);
+    final container = Provider.of<DiContainer>(context);
 
     return builder(
-      diModule.resolve<T>(),
+      container.resolve<T>(),
     );
   }
 }
@@ -30,11 +30,11 @@ class DependentWidget2<T1, T2> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final diModule = Provider.of<DiModule>(context);
+    final container = Provider.of<DiContainer>(context);
 
     return builder(
-      diModule.resolve<T1>(),
-      diModule.resolve<T2>(),
+      container.resolve<T1>(),
+      container.resolve<T2>(),
     );
   }
 }
@@ -49,12 +49,12 @@ class DependentWidget3<T1, T2, T3> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final diModule = Provider.of<DiModule>(context);
+    final container = Provider.of<DiContainer>(context);
 
     return builder(
-      diModule.resolve<T1>(),
-      diModule.resolve<T2>(),
-      diModule.resolve<T3>(),
+      container.resolve<T1>(),
+      container.resolve<T2>(),
+      container.resolve<T3>(),
     );
   }
 }
@@ -69,13 +69,13 @@ class DependentWidget4<T1, T2, T3, T4> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final diModule = Provider.of<DiModule>(context);
+    final container = Provider.of<DiContainer>(context);
 
     return builder(
-      diModule.resolve<T1>(),
-      diModule.resolve<T2>(),
-      diModule.resolve<T3>(),
-      diModule.resolve<T4>(),
+      container.resolve<T1>(),
+      container.resolve<T2>(),
+      container.resolve<T3>(),
+      container.resolve<T4>(),
     );
   }
 }
@@ -90,14 +90,14 @@ class DependentWidget5<T1, T2, T3, T4, T5> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final diModule = Provider.of<DiModule>(context);
+    final container = Provider.of<DiContainer>(context);
 
     return builder(
-      diModule.resolve<T1>(),
-      diModule.resolve<T2>(),
-      diModule.resolve<T3>(),
-      diModule.resolve<T4>(),
-      diModule.resolve<T5>(),
+      container.resolve<T1>(),
+      container.resolve<T2>(),
+      container.resolve<T3>(),
+      container.resolve<T4>(),
+      container.resolve<T5>(),
     );
   }
 }
@@ -112,15 +112,15 @@ class DependentWidget6<T1, T2, T3, T4, T5, T6> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final diModule = Provider.of<DiModule>(context);
+    final container = Provider.of<DiContainer>(context);
 
     return builder(
-      diModule.resolve<T1>(),
-      diModule.resolve<T2>(),
-      diModule.resolve<T3>(),
-      diModule.resolve<T4>(),
-      diModule.resolve<T5>(),
-      diModule.resolve<T6>(),
+      container.resolve<T1>(),
+      container.resolve<T2>(),
+      container.resolve<T3>(),
+      container.resolve<T4>(),
+      container.resolve<T5>(),
+      container.resolve<T6>(),
     );
   }
 }
@@ -135,16 +135,16 @@ class DependentWidget7<T1, T2, T3, T4, T5, T6, T7> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final diModule = Provider.of<DiModule>(context);
+    final container = Provider.of<DiContainer>(context);
 
     return builder(
-      diModule.resolve<T1>(),
-      diModule.resolve<T2>(),
-      diModule.resolve<T3>(),
-      diModule.resolve<T4>(),
-      diModule.resolve<T5>(),
-      diModule.resolve<T6>(),
-      diModule.resolve<T7>(),
+      container.resolve<T1>(),
+      container.resolve<T2>(),
+      container.resolve<T3>(),
+      container.resolve<T4>(),
+      container.resolve<T5>(),
+      container.resolve<T6>(),
+      container.resolve<T7>(),
     );
   }
 }
@@ -159,17 +159,17 @@ class DependentWidget8<T1, T2, T3, T4, T5, T6, T7, T8> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final diModule = Provider.of<DiModule>(context);
+    final container = Provider.of<DiContainer>(context);
 
     return builder(
-      diModule.resolve<T1>(),
-      diModule.resolve<T2>(),
-      diModule.resolve<T3>(),
-      diModule.resolve<T4>(),
-      diModule.resolve<T5>(),
-      diModule.resolve<T6>(),
-      diModule.resolve<T7>(),
-      diModule.resolve<T8>(),
+      container.resolve<T1>(),
+      container.resolve<T2>(),
+      container.resolve<T3>(),
+      container.resolve<T4>(),
+      container.resolve<T5>(),
+      container.resolve<T6>(),
+      container.resolve<T7>(),
+      container.resolve<T8>(),
     );
   }
 }
