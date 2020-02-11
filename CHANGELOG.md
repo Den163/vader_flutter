@@ -1,3 +1,8 @@
+## [1.0.0] 2020/02/20
+
+Updated to the vader_di 1.0.0. Note! Breaking changes. 
+See [vader_di](https://pub.dev/packages/vader_di) for more details
+
 ## [0.6.0] 2020/01/14
 
 Updated to the vader_di 0.3.1
