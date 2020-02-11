@@ -43,7 +43,7 @@ class ModuleValueInjector<T> extends ModuleInjector {
   }) : super(key: key);
 
   @override
-  void configure(DiModule module) {
-    module.bind<T>().toValue(valueToResolve);
+  void configure(DiContainer container) {
+    container.bind<T>().toValue(valueToResolve);
   }
 }

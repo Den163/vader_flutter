@@ -19,15 +19,15 @@ define a lot of services, repositories, BloCs(Business Logic Components), etc 's
 to receive it from any point of a Flutter app. 
 Note, that [Vader](https://pub.dev/packages/vader_di) not listening on all dependencies like 
 a [Provider](https://github.com/rrousselGit/provider). And it's use case just to define and pass
-static 'business logic' dependencies. It's only listening on ``DiModule`` 
-and rebuilds `ModuleInjector`'s subtree only if the parent `DiModule` changes,
+static 'business logic' dependencies. It's only listening on ``DiContainer`` 
+and rebuilds `ModuleInjector`'s subtree only if the parent `DiContainer` changes,
 because it passes through app via a [Provider](https://github.com/rrousselGit/provider).
 
 ## Basic Usage
 
-A ``ModuleInjector`` is just a Widget wrapper around a ```DiModule``` vader class. 
-It is an abstract, so you need to subclass it to override a ```configure(DiModule)``` 
-```build(BuildContext)``` methods. The first one is just defines dependencies via ```DiModule``` 
+A ``ModuleInjector`` is just a Widget wrapper around a ```DiContainer``` vader class. 
+It is an abstract, so you need to subclass it to override a ```configure(DiContainer)``` 
+```build(BuildContext)``` methods. The first one is just defines dependencies via ```DiContainer``` 
 ([see Vader](https://pub.dev/packages/vader_di)) for the subtree building from 
 ```build(BuildContext)``` method.
 
@@ -45,7 +45,6 @@ Tired of a boring builder and factory writings for Widgets? Look at ```Injectabl
 It just resolves and builds as child configured earlier ```Widget``` of type ```T```
 
 ## Example
-
 ```dart
 import 'package:flutter/material.dart';
 import 'package:vader_di/vader.dart';
@@ -92,8 +91,8 @@ class ModuleValueInjector<T> extends ModuleInjector {
   }) : super(key: key);
 
   @override
-  void configure(DiModule module) {
-    module.bind<T>().toValue(valueToResolve);
+  void configure(DiContainer container) {
+    container.bind<T>().toValue(valueToResolve);
   }
 }
 ```

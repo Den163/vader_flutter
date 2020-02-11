@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vader_di/src/di_module.dart';
 import 'package:vader_flutter/src/dependent_widget.dart';
 import 'package:vader_flutter/src/module_injector.dart';
+import 'package:vader_flutter/vader_flutter.dart';
 
 
 void main() {
@@ -48,8 +48,8 @@ class ModuleInjectorMock<T> extends ModuleInjector {
   }) : super(key: key);
 
   @override
-  void configure(DiModule module) {
-    module.bind<T>().toValue(valueToResolve);
+  void configure(DiContainer container) {
+    container.bind<T>().toValue(valueToResolve);
   }
 }
 
