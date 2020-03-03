@@ -136,7 +136,7 @@ packages:
       name: provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.0.3"
+    version: "4.0.4"
   quiver:
     dependency: transitive
     description:
@@ -204,7 +204,7 @@ packages:
       name: vader_di
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.1.0"
   vector_math:
     dependency: transitive
     description:
