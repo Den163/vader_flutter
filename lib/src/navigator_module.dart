@@ -50,16 +50,12 @@ class _NavigatorModuleState extends State<NavigatorModule> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () => _navigatorKey.currentState
-        .maybePop().then((mb) => !mb),
-      child: Navigator(
-        key: _navigatorKey,
-        onGenerateRoute: (settings) => widget.routes[settings.name](settings),
-        initialRoute: widget.initialRoute,
-        onUnknownRoute: widget.onUnknownRoute,
-        observers: widget.observers,
-      )
+    return Navigator(
+      key: _navigatorKey,
+      onGenerateRoute: (settings) => widget.routes[settings.name](settings),
+      initialRoute: widget.initialRoute,
+      onUnknownRoute: widget.onUnknownRoute,
+      observers: widget.observers,
     );
   }
 }
