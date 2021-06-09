@@ -7,7 +7,7 @@ abstract class ModuleInjector extends StatelessWidget {
   Widget get child;
   void configure(DiContainer module);
 
-  ModuleInjector({Key key}) : super(key: key);
+  ModuleInjector({Key? key}) : super(key: key);
 
   @override
   @nonVirtual
@@ -25,7 +25,7 @@ abstract class ModuleInjector extends StatelessWidget {
     );
   }
 
-  DiContainer _tryGetParentContainer(BuildContext context) {
+  DiContainer? _tryGetParentContainer(BuildContext context) {
     try {
       return Provider.of<DiContainer>(context);
     } catch (e) {

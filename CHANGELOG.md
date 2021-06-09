@@ -1,3 +1,6 @@
+## [1.2.0] 2021/06/09
+Updated dependencies. Added null safety support. Updated tests
+
 ## [1.1.0] 2020/03/03
 
 Updated to the vader_di 1.1.0. Added CustomFactories in its core.

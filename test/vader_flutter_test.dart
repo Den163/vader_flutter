@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:vader_flutter/src/dependent_widget.dart';
 import 'package:vader_flutter/src/module_injector.dart';
 import 'package:vader_flutter/vader_flutter.dart';
-
 
 void main() {
   testWidgets(
@@ -22,8 +22,8 @@ class TestableWidget<T extends Object> extends StatelessWidget {
   final T valueToResolve;
 
   const TestableWidget({
-    Key key,
-    this.valueToResolve
+    Key? key,
+    required this.valueToResolve
   }) : super(key: key);
 
   @override
@@ -42,9 +42,9 @@ class ModuleInjectorMock<T> extends ModuleInjector {
   final T valueToResolve;
 
   ModuleInjectorMock({
-    Key key,
-    @required this.child,
-    @required this.valueToResolve
+    Key? key,
+    required this.child,
+    required this.valueToResolve
   }) : super(key: key);
 
   @override

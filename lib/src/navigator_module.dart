@@ -12,14 +12,14 @@ typedef Route RouteBuilder(RouteSettings settings);
 /// ([HeroController] is a subclass of a [NavigatorObserver])
 class NavigatorModule extends StatefulWidget {
   final Map<String, RouteBuilder> routes;
-  final RouteBuilder onUnknownRoute;
+  final RouteBuilder? onUnknownRoute;
   final List<NavigatorObserver> observers;
-  final String initialRoute;
-  final GlobalKey<NavigatorState> navigatorKey;
+  final String? initialRoute;
+  final GlobalKey<NavigatorState>? navigatorKey;
 
   NavigatorModule({
-    Key key,
-    @required this.routes,
+    Key? key,
+    required this.routes,
     this.initialRoute,
     this.observers = const <NavigatorObserver>[],
     this.onUnknownRoute,
@@ -39,7 +39,7 @@ class NavigatorModule extends StatefulWidget {
 }
 
 class _NavigatorModuleState extends State<NavigatorModule> {
-  GlobalKey<NavigatorState> _navigatorKey;
+  GlobalKey<NavigatorState>? _navigatorKey;
 
   @override
   void initState() {
@@ -52,7 +52,13 @@ class _NavigatorModuleState extends State<NavigatorModule> {
   Widget build(BuildContext context) {
     return Navigator(
       key: _navigatorKey,
-      onGenerateRoute: (settings) => widget.routes[settings.name](settings),
+      onGenerateRoute: (settings) {
+        final route = widget.routes[settings.name];
+        if (route == null)
+          throw StateError("Can't find route with name: ${settings.name}");
+
+        return route(settings);
+      },
       initialRoute: widget.initialRoute,
       onUnknownRoute: widget.onUnknownRoute,
       observers: widget.observers,
